@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option go_package = ".;math";
+
+service MathUtil{
+  rpc Add(Vector2) returns (Num){}
+  rpc Sub(Vector2) returns (Num){}
+}
+
+message Vector2{
+  int32 Numa = 1;
+  int32 Numb = 2;
+}
+
+message Num{
+  int32 Num = 1;
+}
+
