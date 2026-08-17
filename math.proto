@@ -1,10 +1,14 @@
 syntax = "proto3";
 
-option go_package = ".;math";
+option go_package = ".;mathpb";
+option java_package = "com.zqyyz.ranksystem.grpc";
+option java_multiple_files = true;
 
 service MathUtil{
   rpc Add(Vector2) returns (Num){}
   rpc Sub(Vector2) returns (Num){}
+  rpc Multiply(Vector2) returns (Num){}
+  rpc DividedBy(Vector2) returns (Num){}
 }
 
 message Vector2{
