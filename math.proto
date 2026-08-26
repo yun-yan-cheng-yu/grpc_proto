@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+import "types.proto";
+
 option go_package = ".;mathpb";
 option java_package = "com.zqyyz.ranksystem.grpc";
 option java_multiple_files = true;
@@ -10,13 +12,3 @@ service MathUtil{
   rpc Multiply(Vector2) returns (Num){}
   rpc DividedBy(Vector2) returns (Num){}
 }
-
-message Vector2{
-  int32 Numa = 1;
-  int32 Numb = 2;
-}
-
-message Num{
-  int32 Num = 1;
-}
-

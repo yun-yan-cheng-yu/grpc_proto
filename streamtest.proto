@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+import "types.proto";
+
+option go_package = ".;mathpb";
+option java_package = "com.zqyyz.ranksystem.grpc";
+option java_multiple_files = true;
+
+service MathStreamUtil{
+  rpc Chat(stream Message) returns (stream Message){}
+  rpc Upload(stream Num) returns (Num){}
+  rpc Download(Num) returns (stream Num){}
+}
